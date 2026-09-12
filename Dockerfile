@@ -1,11 +1,12 @@
 FROM php:8.2-apache
 
-RUN a2dismod mpm_event mpm_worker 2>/dev/null || true \
+RUN rm -f /etc/apache2/mods-enabled/mpm_*.load \
+          /etc/apache2/mods-enabled/mpm_*.conf \
     && a2enmod mpm_prefork
 
 COPY . /var/www/html/
 
-# Sauvegarde des données initiales pour l'initialisation du volume
+# Copie de sauvegarde des données initiales
 RUN cp -a /var/www/html/data /var/www/html/data-default
 
 EXPOSE 80
