@@ -21,8 +21,8 @@ define('GEO_API_URL',   'http://ip-api.com/json/%s?fields=countryCode');
 
 // ─── Security ────────────────────────────────────────────────────────────────
 define('MAX_LOGIN_ATTEMPTS', 5);
-define('ADMIN_SESSION_KEY',  'spidermod_admin_v1');
+define('ADMIN_SESSION_KEY', 'wetry_admin_v1');
 
 // ─── Site Info ───────────────────────────────────────────────────────────────
-define('SITE_NAME',  'SPIDERMOD');
-define('SITE_URL',   '');               // Set if needed, e.g. https://spidermod.com
+define('SITE_NAME', 'Wetry');
+define('SITE_URL', '');
